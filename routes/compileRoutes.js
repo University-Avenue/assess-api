@@ -1,5 +1,5 @@
 module.exports = app => {
-  app.post('/test', (req,res) => {
+  app.post('/run_code', (req,res) => {
     console.log(req.body);
   });
 }
