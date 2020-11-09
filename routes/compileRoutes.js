@@ -2,12 +2,10 @@ const { postRequest } = require('./util');
 
 module.exports = (app) => {
   app.post('/run_code', (req, res) => {
-    console.log(req.body.code);
     const payload = JSON.stringify({
       source_code: req.body.code,
-      language_id: 70,
+      language_id: req.body.language_id,
     });
-
     const options = {
       hostname: process.env.JUDGE0_URL,
       path: '/submissions/?wait=true',
