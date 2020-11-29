@@ -1,7 +1,7 @@
 const https = require('https');
 const http = require('http');
 
-const postRequest = (options, data, onResult) => {
+const makeRequest = (options, data, onResult) => {
   // https requests by default use port 443 and http use port 80
   const port = options.port === 443 ? https : http;
   const req = port.request(options, (res) => {
@@ -21,4 +21,4 @@ const postRequest = (options, data, onResult) => {
   req.end();
 };
 
-exports.postRequest = postRequest;
+exports.makeRequest = makeRequest;
