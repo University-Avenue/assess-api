@@ -16,11 +16,14 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 require('./routes/compileRoutes')(app);
-require('./routes/roomRoutes')(app, io);
 
 io.on('connection', (socket) => {
   socket.on('room', (room) => {
     socket.join(room);
+  });
+
+  socket.on('user_input', data => {
+    socket.to(data.room).emit('message', { message: data.message });
   });
 });
 
