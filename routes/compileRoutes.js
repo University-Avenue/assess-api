@@ -41,7 +41,7 @@ module.exports = (app) => {
       };
 
       setTimeout(() => {
-        postRequest(getOptions, payload, (getStatus, getResult) => {
+        makeRequest(getOptions, payload, (getStatus, getResult) => {
           console.log(getStatus, getResult);
         });
       }, 3000);
