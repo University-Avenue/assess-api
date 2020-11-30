@@ -1,6 +1,5 @@
 # assess-api
-
-## Inspiration
+The back-end codebase
 
 ## What it does
 Conduct remote, real-time technical programming interviews with candidates right in monday.com -- all while tracking a candidate's progress. We hope that Assess can bridge the gap between HR and Engineering teams, enabling them to consolidate their data in a single place!
@@ -25,15 +24,3 @@ Prior to the interview starting, the interviewer can choose a technical question
 In addition to providing an enjoyable candidate experience, consolidating the technical interview with the recruitment pipeline in one place makes an interviewer's life that much easier. No longer does one need to copy over notes.
 
 It should be noted, that our Assess app is not limited to interviews for engineering roles. It can most definitely support non-technical interviews. Consolidating applications into one location allows for much smoother communication between various teams and HR. 
-
-## How we built it
-
-## Challenges we ran into
-
-## Accomplishments that I'm proud of
-
-## What we learned
-
-## What's next for Assess
-There's a lot we'd love to add given a longer timeline. Some additions include adding storing candidate code and allowing the interviewer to edit and type in the code screen. 
-
