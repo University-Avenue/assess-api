@@ -25,6 +25,16 @@ io.on('connection', (socket) => {
   socket.on('user_input', data => {
     socket.to(data.room).emit('message', { message: data.message });
   });
+
+  socket.on('start_compile', data => {
+    console.log(data);
+    socket.to(data.room).emit('compile_started');
+  });
+
+  socket.on('compile_result', data => {
+    console.log(data);
+    socket.to(data.room).emit('compile_message', { message: data.message });
+  });
 });
 
 const PORT = process.env.PORT || 5000;
