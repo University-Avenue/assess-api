@@ -27,13 +27,11 @@ io.on('connection', (socket) => {
   });
 
   socket.on('start_compile', data => {
-    console.log(data);
-    socket.to(data.room).emit('compile_started');
+    io.in(data.room).emit('compile_started');
   });
 
   socket.on('compile_result', data => {
-    console.log(data);
-    socket.to(data.room).emit('compile_message', { message: data.message });
+    io.in(data.room).emit('compile_message', { message: data.message });
   });
 });
 
